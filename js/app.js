@@ -29,8 +29,8 @@ document.getElementById('calculate-total').addEventListener('click',function(){
 
 
 
-// document.getElementById('btn-select').addEventListener('click', function(){
+document.getElementById('btn-select').addEventListener('click', function(){
 
-//    const playerShow = document.getElementById('player-show')
+   const playerShow = document.getElementById('player-show')
   
-// })
+})
