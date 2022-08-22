@@ -1,13 +1,13 @@
-// document.getElementById('calculate').addEventListener('click',function(){
+document.getElementById('calculate').addEventListener('click',function(){
    
-//     const perPlayerField = getInputFieldValueById('perPlayer-field');
+    const perPlayerField = getInputFieldValueById('perPlayer-field');
     
-//     const playerExpensesTotal = perPlayerField * 5;
+    const playerExpensesTotal = perPlayerField * 5;
 
-//     const playerExpensesShow =  getElementValueById('player-expenses')
+    const playerExpensesShow =  getElementValueById('player-expenses')
 
-//     setTextElementValueById('player-expenses', playerExpensesTotal)
-// })
+    setTextElementValueById('player-expenses', playerExpensesTotal)
+})
 
 
 
