@@ -1,30 +1,30 @@
-document.getElementById('calculate').addEventListener('click',function(){
+// document.getElementById('calculate').addEventListener('click',function(){
    
-    const perPlayerField = getInputFieldValueById('perPlayer-field');
+//     const perPlayerField = getInputFieldValueById('perPlayer-field');
     
-    const playerExpensesTotal = perPlayerField * 5;
+//     const playerExpensesTotal = perPlayerField * 5;
 
-    const playerExpensesShow =  getElementValueById('player-expenses')
-
-    setTextElementValueById('player-expenses', playerExpensesTotal)
-})
-
-
-
-
-
-
-// document.getElementById('calculate-total').addEventListener('click',function(){
-   
 //     const playerExpensesShow =  getElementValueById('player-expenses')
 
-//     const managerField = getInputFieldValueById('manager-field');
-//     const coachField = getInputFieldValueById('coach-field');
-
-//     const totalCost = playerExpensesShow + managerField + coachField;
-
-//     setTextElementValueById('final-total',totalCost)
+//     setTextElementValueById('player-expenses', playerExpensesTotal)
 // })
+
+
+
+
+
+
+document.getElementById('calculate-total').addEventListener('click',function(){
+   
+    const playerExpensesShow =  getElementValueById('player-expenses')
+
+    const managerField = getInputFieldValueById('manager-field');
+    const coachField = getInputFieldValueById('coach-field');
+
+    const totalCost = playerExpensesShow + managerField + coachField;
+
+    setTextElementValueById('final-total',totalCost)
+})
 
 
 
