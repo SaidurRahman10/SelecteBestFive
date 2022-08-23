@@ -1,22 +1,29 @@
+// Order list 
 const orderList = document.getElementById("order_list");
 const selectedBtn = document.getElementsByClassName("selected_btn");
 for (let btn of selectedBtn) {
   btn.addEventListener("click", function (event) {
-    const textContent = event.target.parentNode.childNodes[1].textContent;
-    createPlayerList(textContent);
+    const content = event.target.parentNode.childNodes[1].textContent;
+    createPlayerList(content);
     event.target.setAttribute("disabled", true);
+    
+    
   });
 }
 
+
+// Calculate Per Player cost
 document
-  .getElementById("player-calcluter")
+  .getElementById("player-calculator")
   .addEventListener("click", function () {
     const playerListNumber = getPlayerListNumber();
-    calcluter("perPlayer-filed", playerListNumber, "player_expenses");
+    calculator("perPlayer-filed", playerListNumber, "player_expenses");
   });
 
+
+  // Calculate manager , couch and Total player Cost
 document
-  .getElementById("total_calcluter_btn")
+  .getElementById("total_calculator_btn")
   .addEventListener("click", function () {
     const managerBudgetFiled = document.getElementById("manager_budget_filed");
     const managerBudgetFiledValue = parseInt(managerBudgetFiled.value);

@@ -16,7 +16,7 @@ function getPlayerListNumber() {
 
 let playerExpensesTotal = [];
 
-function calcluter(elementId, playerList, playerExpensesId) {
+function calculator(elementId, playerList, playerExpensesId) {
   const elementIdName = document.getElementById(elementId);
   const elementIdValue = parseInt(elementIdName.value);
   if (isNaN(elementIdValue)) {
