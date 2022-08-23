@@ -22,6 +22,10 @@
         background-image: url("img/up00.png");
 
         background-size: cover;
+       
+      }
+      #player-show{
+        list-style-type: decimal;
       }
     </style>
   </head>
@@ -58,12 +62,13 @@
                     <p class="text-sm text-slate-400 leading-relaxed mb-7">
                       Bowling Rank #27
                     </p>
-                    <button id="btn-select"  class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition">
-                 
-                       
-                      
-                        Selected
-                     
+                    <!-- working this disable button -->
+                    <button
+                      onclick="taskin()"  
+                      id="btn-taskin"
+                      class="dd py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                    >
+                      Selected
                     </button>
                   </div>
                 </div>
@@ -78,12 +83,13 @@
                     <p class="text-sm text-slate-400 leading-relaxed mb-7">
                       All rounder Rank #1
                     </p>
-                    <button>
-                      <a
-                        class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
-                      >
-                        Selected
-                      </a>
+                    <button
+                    onclick="shakib()"
+                     
+                      id="btn-shakib"
+                      class="dd py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                    >
+                      Selected
                     </button>
                   </div>
                 </div>
@@ -98,12 +104,11 @@
                     <p class="text-sm text-slate-400 leading-relaxed mb-7">
                       Bowling Rank #57
                     </p>
-                    <button>
-                      <a
-                        class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
-                      >
-                        Selected
-                      </a>
+                    <button onclick="mashrafe()"
+                      id="btn-mashrafe"
+                      class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                    >
+                      Selected
                     </button>
                   </div>
                 </div>
@@ -120,12 +125,11 @@
                     <p class="text-sm text-slate-400 leading-relaxed mb-7">
                       Batting Rank #21
                     </p>
-                    <button>
-                      <a
-                        class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
-                      >
-                        Selected
-                      </a>
+                    <button onclick="mushfiqur()"
+                      id="btn-mushfiqur"
+                      class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                    >
+                      Selected
                     </button>
                   </div>
                 </div>
@@ -140,12 +144,11 @@
                     <p class="text-sm text-slate-400 leading-relaxed mb-7">
                       Bowling Rank #15
                     </p>
-                    <button>
-                      <a
-                        class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
-                      >
-                        Selected
-                      </a>
+                    <button onclick="mustafiz()"
+                      id="btn-mustafiz"
+                      class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                    >
+                      Selected
                     </button>
                   </div>
                 </div>
@@ -160,12 +163,11 @@
                     <p class="text-sm text-slate-400 leading-relaxed mb-7">
                       Batting Rank #20
                     </p>
-                    <button>
-                      <a
-                        class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
-                      >
-                        Selected
-                      </a>
+                    <button onclick=" mahmudullah()"
+                      id="btn-mahmudullah"
+                      class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                    >
+                      Selected
                     </button>
                   </div>
                 </div>
@@ -178,11 +180,11 @@
         <div id="calculate-div" class="col-span-1 row-span-5 w-9/12 mx-auto">
           <section id="js-section">
             <!-- player show  -->
-            <h1 class="text-3xl text-center mb-24">Best - Five</h1>
+            <h1 class="text-3xl text-center mb-6">Best - Five</h1>
 
-            <ul id="player-show">
-
-            </ul>
+            <ol id="player-show">
+          
+            </ol>
 
             <br /><br />
             <!-- Budget Div -->
