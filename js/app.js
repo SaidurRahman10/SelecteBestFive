@@ -1,85 +1,43 @@
-document.getElementById("calculate").addEventListener("click", function () {
-  const perPlayerField = getInputFieldValueById("perPlayer-field");
-
-  if (isNaN(perPlayerField)) {
-    alert("Error!!! Please Enter a Valid Number");
-  } else {
-    const playerExpensesTotal = perPlayerField * 5;
-
-    const playerExpensesShow = getElementValueById("player-expenses");
-
-    setTextElementValueById("player-expenses", playerExpensesTotal);
-  }
-});
+const orderList = document.getElementById("order_list");
+const selectedBtn = document.getElementsByClassName("selected_btn");
+for (let btn of selectedBtn) {
+  btn.addEventListener("click", function (event) {
+    const textContent = event.target.parentNode.childNodes[1].textContent;
+    createPlayerList(textContent);
+    event.target.setAttribute("disabled", true);
+  });
+}
 
 document
-  .getElementById("calculate-total")
+  .getElementById("player-calcluter")
   .addEventListener("click", function () {
-    
-    const managerField = getInputFieldValueById("manager-field");
-    const coachField = getInputFieldValueById("coach-field");
-    if(isNaN(managerField)){
-      alert("Error!!! Please Enter a Valid Number");
-    }else if(isNaN(coachField)){
-      alert("Error!!! Please Enter a Valid Number");
-
-    }else{
-      
-      const playerExpensesShow = getElementValueById("player-expenses");
-      const totalCost = playerExpensesShow + managerField + coachField;
-  
-      setTextElementValueById("final-total", totalCost);
-    }
+    const playerListNumber = getPlayerListNumber();
+    calcluter("perPlayer-filed", playerListNumber, "player_expenses");
   });
 
-//selected Buttons
-
-//taskin
-document.getElementById("btn-taskin").addEventListener("click", function () {
-  const playerShow = document.getElementById("player-show");
-  const li = document.createElement("li");
-  li.innerText = "    Taskin Ahammed";
-
-  playerShow.appendChild(li);
-});
-//shakib
-document.getElementById("btn-shakib").addEventListener("click", function () {
-  const playerShow = document.getElementById("player-show");
-  const li = document.createElement("li");
-  li.innerText = "    Shakib Al Hasan";
-  playerShow.appendChild(li);
-});
-//mashrafe
-document.getElementById("btn-mashrafe").addEventListener("click", function () {
-  const playerShow = document.getElementById("player-show");
-  const li = document.createElement("li");
-  li.innerText = "    Mashrafe bin Mortaza";
-  playerShow.appendChild(li);
-});
-// Mushfiqur
-document.getElementById("btn-mushfiqur").addEventListener("click", function () {
-  const playerShow = document.getElementById("player-show");
-  const li = document.createElement("li");
-  li.innerText = " Mushfiqur Rahim";
-  playerShow.appendChild(li);
-});
-// Mustafizur
-document.getElementById("btn-mustafiz").addEventListener("click", function () {
-  const playerShow = document.getElementById("player-show");
-  const li = document.createElement("li");
-  li.innerText = "Mustafizur Rahman";
-  playerShow.appendChild(li);
-});
-//Mahmudullah
 document
-  .getElementById("btn-mahmudullah")
+  .getElementById("total_calcluter_btn")
   .addEventListener("click", function () {
-    const playerShow = document.getElementById("player-show");
-    const li = document.createElement("li");
-    li.innerText = " Mahmudullah Riyad";
-    playerShow.appendChild(li);
-
-    if (li.length == 5) {
-      alert("U cant add more than 5");
+    const managerBudgetFiled = document.getElementById("manager_budget_filed");
+    const managerBudgetFiledValue = parseInt(managerBudgetFiled.value);
+    if (isNaN(managerBudgetFiledValue)) {
+      alert("Error!!! Please Enter a Valid Number of Manager Amount");
+      return;
     }
+    const playerExpensesTotalAmount = parseInt(playerExpensesTotal[0]);
+
+    const totalAmount = document.getElementById("total_amount");
+    let playerAndManagerTotalAmount =
+      playerExpensesTotalAmount + managerBudgetFiledValue;
+    totalAmount.innerText = playerAndManagerTotalAmount;
+
+    const coachBudgetFiled = document.getElementById("coach_budget_filed");
+    const courseBudgetFiledValue = parseInt(coachBudgetFiled.value);
+    if (isNaN(courseBudgetFiledValue)) {
+      alert("Error!!! Please Enter a Valid Number of Couch Amount");
+      return;
+    }
+    const playerAndCourseTotalAmount =
+      parseInt(totalAmount.innerText) + courseBudgetFiledValue;
+    totalAmount.innerText = playerAndCourseTotalAmount;
   });

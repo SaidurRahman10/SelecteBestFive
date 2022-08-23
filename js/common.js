@@ -1,68 +1,29 @@
-// input Field er Jonno
-function getInputFieldValueById(inputId) {
-  const element = document.getElementById(inputId);
-  const elementString = element.value;
-  const elementValue = parseInt(elementString);
-
-  return elementValue;
+function createPlayerList(playerName) {
+  const li = document.createElement("li");
+  li.innerText = playerName;
+  if (orderList.children.length === 5) {
+    alert("Warning!!! you can not buy more than 5 player");
+    return;
+  } else {
+    orderList.appendChild(li);
+    return li;
+  }
+}
+function getPlayerListNumber() {
+  const listNo = orderList.children;
+  return listNo.length;
 }
 
-// previous value er jonno
-function getElementValueById(elementId) {
-  const element = document.getElementById(elementId);
-  const elementString = element.innerText;
-  const previousElementValue = parseInt(elementString);
-  return previousElementValue;
-}
+let playerExpensesTotal = [];
 
-// value k previous value te connection korar jonno
-function setTextElementValueById(id, value) {
-  const element = document.getElementById(id);
-  element.innerText = value;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//button disable
-// <!-- working this disable button -->
-function DisableButton() {
-  document.getElementById("btn-taskin").disabled = "true";
-}
-
-function taskin() {
-  document.getElementById("btn-taskin").disabled = true;
-}
-function shakib() {
-  document.getElementById("btn-shakib").disabled = true;
-}
-function mashrafe() {
-  document.getElementById("btn-mashrafe").disabled = true;
-}
-function mushfiqur() {
-  document.getElementById("btn-mushfiqur").disabled = true;
-}
-function mustafiz() {
-  document.getElementById("btn-mustafiz").disabled = true;
-}
-function mahmudullah() {
-  document.getElementById("btn-mahmudullah").disabled = true;
+function calcluter(elementId, playerList, playerExpensesId) {
+  const elementIdName = document.getElementById(elementId);
+  const elementIdValue = parseInt(elementIdName.value);
+  if (isNaN(elementIdValue)) {
+    alert("Error!!! Please Enter a Valid Number");
+    return;
+  }
+  const playerExpenses = document.getElementById(playerExpensesId);
+  playerExpenses.innerText = elementIdValue * playerList;
+  playerExpensesTotal.push(playerExpenses.innerText);
 }

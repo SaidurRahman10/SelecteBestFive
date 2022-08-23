@@ -22,9 +22,8 @@
         background-image: url("img/up00.png");
 
         background-size: cover;
-       
       }
-      #player-show{
+      #order_list {
         list-style-type: decimal;
       }
     </style>
@@ -64,9 +63,7 @@
                     </p>
                     <!-- working this disable button -->
                     <button
-                      onclick="taskin()"  
-                      id="btn-taskin"
-                      class="dd py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                      class="selected_btn py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
                     >
                       Selected
                     </button>
@@ -84,10 +81,7 @@
                       All rounder Rank #1
                     </p>
                     <button
-                    onclick="shakib()"
-                     
-                      id="btn-shakib"
-                      class="dd py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                      class="selected_btn py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
                     >
                       Selected
                     </button>
@@ -104,9 +98,8 @@
                     <p class="text-sm text-slate-400 leading-relaxed mb-7">
                       Bowling Rank #57
                     </p>
-                    <button onclick="mashrafe()"
-                      id="btn-mashrafe"
-                      class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                    <button
+                      class="selected_btn py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
                     >
                       Selected
                     </button>
@@ -125,9 +118,8 @@
                     <p class="text-sm text-slate-400 leading-relaxed mb-7">
                       Batting Rank #21
                     </p>
-                    <button onclick="mushfiqur()"
-                      id="btn-mushfiqur"
-                      class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                    <button
+                      class="selected_btn py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
                     >
                       Selected
                     </button>
@@ -144,9 +136,8 @@
                     <p class="text-sm text-slate-400 leading-relaxed mb-7">
                       Bowling Rank #15
                     </p>
-                    <button onclick="mustafiz()"
-                      id="btn-mustafiz"
-                      class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                    <button
+                      class="selected_btn py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
                     >
                       Selected
                     </button>
@@ -163,9 +154,8 @@
                     <p class="text-sm text-slate-400 leading-relaxed mb-7">
                       Batting Rank #20
                     </p>
-                    <button onclick=" mahmudullah()"
-                      id="btn-mahmudullah"
-                      class="py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
+                    <button
+                      class="selected_btn py-2 px-14 rounded-sm bg-sky-600 text-base text-white font-medium hover:border-primary hover:bg-primary hover:text-white transition"
                     >
                       Selected
                     </button>
@@ -182,9 +172,7 @@
             <!-- player show  -->
             <h1 class="text-3xl text-center mb-6">Best - Five</h1>
 
-            <ol id="player-show">
-          
-            </ol>
+            <ol id="order_list"></ol>
 
             <br /><br />
             <!-- Budget Div -->
@@ -193,26 +181,26 @@
             <div class="flex justify-between mb-6">
               <p class="text-slate-400">Per Player</p>
               <input
-                id="perPlayer-field"
+                id="perPlayer-filed"
                 class="rounded-md w-28 bg-transparent border border-gray-400"
                 type="text"
               />
             </div>
             <button
               class="py-2 px-20 rounded-sm bg-sky-600 text-base text-white font-medium transition"
-              id="calculate"
+              id="player-calcluter"
             >
               Calculate
             </button>
 
             <p class="text-slate-400 mt-10 text-xl mb-7">
-              Player Expenses: $<span id="player-expenses"> 00</span>
+              Player Expenses: $<span id="player_expenses"> 00</span>
             </p>
 
             <div class="flex justify-between mb-6">
               <p class="text-slate-400">Manager</p>
               <input
-                id="manager-field"
+                id="manager_budget_filed"
                 class="rounded-md w-28 bg-transparent border border-gray-400"
                 type="text"
               />
@@ -220,7 +208,7 @@
             <div class="flex justify-between mb-10">
               <p class="text-slate-400">Coach</p>
               <input
-                id="coach-field"
+                id="coach_budget_filed"
                 class="rounded-md w-28 bg-transparent border border-gray-400"
                 type="text"
               />
@@ -228,7 +216,7 @@
             <center>
               <button
                 class="py-2 px-10 rounded-sm bg-sky-600 text-base text-white font-medium transition"
-                id="calculate-total"
+                id="total_calcluter_btn"
               >
                 Calculate Total
               </button>
@@ -236,7 +224,9 @@
 
             <div class="flex justify-between mt-10">
               <p>Total</p>
-              <h5 class="text-orange-500">$<span id="final-total">00</span></h5>
+              <h5 class="text-orange-500">
+                $<span id="total_amount">00</span>
+              </h5>
             </div>
           </section>
         </div>
